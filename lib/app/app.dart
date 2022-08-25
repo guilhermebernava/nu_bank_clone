@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nu_bank_clone/app/splash/domain/entities/splash_props.dart';
+import 'package:nu_bank_clone/app/splash/domain/entities/loading_params.dart';
 import 'package:nu_bank_clone/app/splash/domain/use_cases/splash_use_case.dart';
 import 'package:nu_bank_clone/app/splash/infra/services/route_services.dart';
 import 'package:nu_bank_clone/app/splash/view/splash_view.dart';
@@ -22,7 +22,7 @@ class App extends StatelessWidget {
         SplashView.route: (ctx) => SplashView(
               splashUseCase: SplashUseCase(
                 RouteServices(),
-                SplashParams(
+                LoadingParams(
                   context: ctx,
                   route: '/home',
                   secondsDuration: 2,

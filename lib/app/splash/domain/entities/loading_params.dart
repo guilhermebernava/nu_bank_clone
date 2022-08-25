@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SplashParams {
+class LoadingParams {
   final String route;
   final int secondsDuration;
   final BuildContext context;
 
-  SplashParams({
+  LoadingParams({
     required this.route,
     required this.context,
     required this.secondsDuration,
