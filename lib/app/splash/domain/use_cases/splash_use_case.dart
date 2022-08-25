@@ -7,10 +7,13 @@ import 'package:nu_bank_clone/app/splash/error/route_exception.dart';
 class SplashUseCase implements ISplashUseCase {
   final IRouteServices _routeServices;
 
-  SplashUseCase(this._routeServices);
+  @override
+  SplashParams params;
+
+  SplashUseCase(this._routeServices, this.params);
 
   @override
-  Future<Either<RouteException, bool>> loading(SplashParams params) async {
+  Future<Either<RouteException, bool>> loading() async {
     return await _routeServices.redirectTo(params);
   }
 }

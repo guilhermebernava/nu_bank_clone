@@ -7,8 +7,6 @@ import 'package:nu_bank_clone/app/splash/error/route_exception.dart';
 import 'package:nu_bank_clone/app/splash/infra/services/route_services.dart';
 
 void main() {
-  final splashUseCase = SplashUseCase(RouteServices());
-
   testWidgets('splash should go to route', (tester) async {
     await tester.pumpWidget(MaterialApp(home: Container()));
     final ctx = tester.element(find.byType(Container));
@@ -17,9 +15,10 @@ void main() {
       context: ctx,
       secondsDuration: 1,
     );
+    final splashUseCase = SplashUseCase(RouteServices(), splashParams);
 
-    final result = await tester.runAsync<Either<RouteException, bool>>(
-        () => splashUseCase.loading(splashParams));
+    final result = await tester
+        .runAsync<Either<RouteException, bool>>(() => splashUseCase.loading());
 
     expect(result, isNotNull);
     expect(result!.isRight(), true);
@@ -33,9 +32,10 @@ void main() {
       context: ctx,
       secondsDuration: 1,
     );
+    final splashUseCase = SplashUseCase(RouteServices(), splashParams);
 
-    final result = await tester.runAsync<Either<RouteException, bool>>(
-        () => splashUseCase.loading(splashParams));
+    final result = await tester
+        .runAsync<Either<RouteException, bool>>(() => splashUseCase.loading());
 
     expect(result, isNotNull);
     expect(result!.isLeft(), true);

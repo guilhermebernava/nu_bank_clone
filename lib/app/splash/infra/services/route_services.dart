@@ -13,7 +13,7 @@ class RouteServices implements IRouteServices {
         Navigator.of(params.context).pushReplacementNamed(params.route);
         return const Right(true);
       } catch (e) {
-        return Left(RouteException('Invalid route'));
+        return Left(RouteException('Invalid Route'));
       }
     });
   }
