@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nu_bank_clone/core/widgets/safe_asset_image.dart';
 import 'package:nu_bank_clone/core/widgets/safe_button/safe_button.dart';
-import 'package:nu_bank_clone/themes/colors/app_colors.dart';
 import 'package:nu_bank_clone/themes/images/app_images.dart';
 import 'package:nu_bank_clone/themes/text_style/app_text_style.dart';
-import 'package:nu_bank_clone/themes/text_style/entity/app_text_theme_props.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -26,22 +24,28 @@ class LoginView extends StatelessWidget {
             width: size.width,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SafeButton(
                   onTap: () {},
                   width: size.width * 0.9,
                   child: Text(
                     'Começar',
-                    style: AppTextStyle.appRobotoCondesend(
-                      AppTextStyleProps(
-                        color: AppColors.white,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    style: AppTextStyle.button,
                   ),
                 ),
+                SafeButton(
+                  noBackground: true,
+                  onTap: () {},
+                  width: size.width * 0.9,
+                  child: Text(
+                    'Entrar com sua conta',
+                    style: AppTextStyle.textButton,
+                  ),
+                ),
+                SizedBox(
+                  height: size.height * 0.05,
+                )
               ],
             ),
           ),

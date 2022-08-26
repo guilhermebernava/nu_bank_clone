@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nu_bank_clone/themes/colors/app_colors.dart';
 import 'entity/app_text_theme_props.dart';
 
 class AppTextStyle {
@@ -12,4 +13,26 @@ class AppTextStyle {
       decoration: props.decoration,
     );
   }
+
+  static TextStyle button = AppTextStyle.appRobotoCondesend(
+    AppTextStyleProps(
+      color: AppColors.white,
+      fontSize: 22,
+      fontWeight: FontWeight.w600,
+    ),
+  );
+
+  static TextStyle textButton = AppTextStyle.appRobotoCondesend(
+    AppTextStyleProps(
+      color: AppColors.white,
+      fontSize: 22,
+      fontWeight: FontWeight.w600,
+      shadows: [
+        Shadow(
+          blurRadius: 10,
+          color: AppColors.black.withOpacity(0.2),
+        )
+      ],
+    ),
+  );
 }
