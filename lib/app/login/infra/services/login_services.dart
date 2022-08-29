@@ -17,6 +17,7 @@ class LoginServices implements ILoginServices {
       if (login.cpf != '479.377.328-14') {
         throw Error();
       }
+
       return Right(
         User(
           cpf: '479.377.328-14',
