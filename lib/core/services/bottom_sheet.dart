@@ -25,7 +25,7 @@ class BottomSheetServices {
       enableDrag: true,
       backgroundColor: Colors.transparent,
       context: context,
-      builder: (context) => LoginBottomSheet(),
+      builder: (context) => const LoginBottomSheet(),
     );
   }
 }

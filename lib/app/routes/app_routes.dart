@@ -1,7 +1,7 @@
 import 'package:get/route_manager.dart';
-import 'package:nu_bank_clone/app/login/login_bindings.dart';
-import 'package:nu_bank_clone/app/login/view/login_view.dart';
-import 'package:nu_bank_clone/app/splash/view/splash_view.dart';
+import 'package:nu_bank_clone/app/modules/login/login_bindings.dart';
+import 'package:nu_bank_clone/app/modules/login/view/login_view.dart';
+import 'package:nu_bank_clone/app/modules/splash/view/splash_view.dart';
 
 class AppRoutes {
   static List<GetPage<dynamic>> pages = [

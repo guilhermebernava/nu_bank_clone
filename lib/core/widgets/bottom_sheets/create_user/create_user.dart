@@ -35,7 +35,8 @@ class CreateUserBottomSheet extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     CoreInput(
-                      controller: TextEditingController(),
+                      initialValue: '',
+                      onChanged: (p0) {},
                       hintText: '000.000.000.00',
                     ),
                   ],

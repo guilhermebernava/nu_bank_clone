@@ -9,6 +9,14 @@ class Validators {
     return false;
   }
 
+  static bool isValidTelephone(String val) {
+    final reg = RegExp(r'^[0-9]{2} [0-9]{4,5}-[0-9]{4}');
+    if (reg.hasMatch(val)) {
+      return true;
+    }
+    return false;
+  }
+
   static bool isValidCpf(String value) {
     final reg = RegExp(r"([0-9]{3}).([0-9]{3}).([0-9]{3}).([0-9]{2})");
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:nu_bank_clone/app/login/widgets/login_buttons.dart';
+import 'package:nu_bank_clone/app/modules/login/widgets/login_buttons.dart';
 import 'package:nu_bank_clone/core/widgets/bottom_sheets/create_user/create_user.dart';
 import 'package:nu_bank_clone/core/widgets/core_close_button/close_button.dart';
 

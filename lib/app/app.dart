@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:nu_bank_clone/app/app_bindings.dart';
+import 'package:nu_bank_clone/app/modules/splash/view/splash_view.dart';
 import 'package:nu_bank_clone/app/routes/app_routes.dart';
-import 'package:nu_bank_clone/app/splash/view/splash_view.dart';
 import 'package:nu_bank_clone/core/helpers/custom_route_transition.dart';
 import 'package:nu_bank_clone/themes/colors/app_material_color.dart';
 
