@@ -1,5 +1,4 @@
 import 'dart:isolate';
-
 import 'package:dartz/dartz.dart';
 import 'package:http/http.dart';
 import 'package:nu_bank_clone/api/entities/base_api_props.dart';
@@ -98,22 +97,23 @@ class BaseApi implements IBaseApi {
       EndpointProps(
         endpoint: props.apiUrl + endpoint,
         sendPort: port.sendPort,
+        body: body,
         headers: props.headers,
       ),
     );
 
     final response = await port.first;
 
-    if (response.statusCode != 200) {
-      return Left(
-        ApiException(
-          endpoint: props.apiUrl + endpoint,
-          errorCode: response.statusCode.toString(),
-        ),
-      );
+    if (response.statusCode == 200 || response.statusCode == 201) {
+      return Right(response.body);
     }
 
-    return Right(response.body);
+    return Left(
+      ApiException(
+        endpoint: props.apiUrl + endpoint,
+        errorCode: response.statusCode.toString(),
+      ),
+    );
   }
 
   @override

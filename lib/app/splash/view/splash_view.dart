@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:nu_bank_clone/app/splash/domain/interfaces/i_splash_use_case.dart';
+import 'package:get/get.dart';
 import 'package:nu_bank_clone/themes/colors/app_colors.dart';
 
 class SplashView extends StatefulWidget {
-  final ISplashUseCase splashUseCase;
+  final String routeTo;
+  final int seconds;
+
   const SplashView({
     Key? key,
-    required this.splashUseCase,
+    required this.routeTo,
+    required this.seconds,
   }) : super(key: key);
 
   static const route = '/splash';
@@ -18,7 +21,9 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    widget.splashUseCase.loading();
+    Future.delayed(Duration(seconds: widget.seconds)).then((value) {
+      Get.toNamed(widget.routeTo);
+    });
     super.initState();
   }
 

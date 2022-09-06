@@ -27,7 +27,7 @@ class LoginButtons extends StatelessWidget {
         ),
         SafeButton(
           noBackground: true,
-          onTap: () {},
+          onTap: () => BottomSheetServices.login(context),
           width: size.width * 0.9,
           child: Text(
             'Entrar com sua conta',

@@ -9,6 +9,6 @@ class ApiException implements Exception {
 
   @override
   String toString() {
-    return 'Message: oops, something went wrong, \nHttp Status Code: $errorCode, \n Endpoint: $endpoint.';
+    return 'Http Status Code: $errorCode, \n Endpoint: $endpoint.';
   }
 }
