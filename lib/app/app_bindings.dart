@@ -1,6 +1,7 @@
 import 'package:get/instance_manager.dart';
 import 'package:nu_bank_clone/api/base_api.dart';
 import 'package:nu_bank_clone/api/entities/base_api_props.dart';
+import 'package:nu_bank_clone/stores/user_store.dart';
 
 class AppBindings implements Bindings {
   @override
@@ -14,6 +15,9 @@ class AppBindings implements Bindings {
           },
         ),
       ),
+    );
+    Get.put(
+      UserStore(),
     );
   }
 }

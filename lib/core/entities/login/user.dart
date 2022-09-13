@@ -1,16 +1,15 @@
 import 'dart:convert';
-
-import 'package:nu_bank_clone/app/modules/login/domain/entities/user_account.dart';
+import 'package:nu_bank_clone/core/entities/login/user_account.dart';
 
 class User {
   final String cpf;
-  final String fullName;
+  String fullName;
   final String prefredName;
-  final String email;
-  final String telephone;
-  final String? profilePicture;
-  final double? montlhyRental;
-  final UserAccount? userAccount;
+  String email;
+  String telephone;
+  String? profilePicture;
+  double? montlhyRental;
+  UserAccount? userAccount;
 
   User({
     required this.cpf,
@@ -31,6 +30,16 @@ class User {
       prefredName: map['preferredName'],
       fullName: map['fullName'],
       telephone: map['telephone'],
+    );
+  }
+
+  factory User.empty() {
+    return User(
+      cpf: '',
+      email: '',
+      prefredName: '',
+      fullName: '',
+      telephone: '',
     );
   }
 }

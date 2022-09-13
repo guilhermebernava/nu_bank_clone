@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'package:nu_bank_clone/api/interfaces/i_base_api.dart';
 import 'package:dartz/dartz.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/entities/login.dart';
-import 'package:nu_bank_clone/app/modules/login/domain/entities/user.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/interfaces/i_user_services.dart';
 import 'package:nu_bank_clone/app/modules/login/errors/login_exception.dart';
 import 'package:nu_bank_clone/app/modules/login/infra/models/create_user_model.dart';
+import 'package:nu_bank_clone/core/entities/login/user.dart';
 import 'package:nu_bank_clone/core/extensions/either_extension.dart';
 
 class UserServices implements IUserServices {

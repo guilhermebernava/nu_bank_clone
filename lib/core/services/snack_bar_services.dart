@@ -6,7 +6,7 @@ class SnackBarServices {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        elevation: 2,
+        elevation: 100,
         backgroundColor: Colors.red,
         duration: const Duration(seconds: 2),
         dismissDirection: DismissDirection.up,

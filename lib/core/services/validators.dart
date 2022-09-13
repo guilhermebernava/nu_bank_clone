@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Validators {
   static bool isStrongPassword(String val) {
-    final reg = RegExp(r'^[0-9]{8}');
+    final reg = RegExp(r'((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})');
     if (reg.hasMatch(val)) {
       return true;
     }

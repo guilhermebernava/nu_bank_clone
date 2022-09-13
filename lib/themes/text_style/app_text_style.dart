@@ -35,4 +35,18 @@ class AppTextStyle {
       ],
     ),
   );
+
+  static TextStyle titleLogin = AppTextStyle.appRobotoCondesend(
+    AppTextStyleProps(
+      fontSize: 35,
+      fontWeight: FontWeight.w500,
+    ),
+  );
+
+  static TextStyle smallTextButton = AppTextStyle.appRobotoCondesend(
+    AppTextStyleProps(
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+    ),
+  );
 }
