@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nu_bank_clone/core/widgets/bottom_sheets/create_user/create_user.dart';
+import 'package:nu_bank_clone/core/widgets/bottom_sheets/login_first/login_bottom_sheet.dart';
 import 'package:nu_bank_clone/core/widgets/bottom_sheets/login_second/login_second_bottom_sheet.dart';
-
-import '../widgets/bottom_sheets/login_first/login_bottom_sheet.dart';
 
 class BottomSheetServices {
   static show(BuildContext context, Widget widget) {
@@ -20,7 +19,7 @@ class BottomSheetServices {
       useRootNavigator: true,
       isScrollControlled: true,
       enableDrag: true,
-      elevation: 1,
+      elevation: 0,
       context: context,
       builder: (context) => widget,
     );

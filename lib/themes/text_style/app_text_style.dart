@@ -43,6 +43,14 @@ class AppTextStyle {
     ),
   );
 
+  static TextStyle titleLoginView = AppTextStyle.appRobotoCondesend(
+    AppTextStyleProps(
+      fontSize: 40,
+      fontWeight: FontWeight.w700,
+      color: AppColors.white,
+    ),
+  );
+
   static TextStyle smallTextButton = AppTextStyle.appRobotoCondesend(
     AppTextStyleProps(
       fontSize: 18,

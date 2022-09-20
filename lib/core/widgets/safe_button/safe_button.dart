@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:nu_bank_clone/core/widgets/safe_button/safe_button_controller.dart';
 import 'package:nu_bank_clone/themes/colors/app_colors.dart';
 
@@ -24,7 +23,7 @@ class SafeButton extends StatefulWidget {
 class _SafeButtonState extends State<SafeButton> with TickerProviderStateMixin {
   late final AnimationController _animationController;
   late final Animation _animation;
-  final controller = Get.put(SafeButtonController());
+  final controller = SafeButtonController();
 
   @override
   void initState() {

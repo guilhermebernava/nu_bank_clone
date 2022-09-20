@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/interfaces/i_create_user_use_case.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/interfaces/i_user_services.dart';
 import 'package:nu_bank_clone/app/modules/login/infra/models/create_user_model.dart';
@@ -32,7 +32,7 @@ class CreateUserUseCase implements ICreateUserUseCase {
         return;
       }
       //TODO adicionar USER da STORE e ir para tela de HOME
-      Get.toNamed(SplashView.route);
+      Modular.to.navigate(SplashView.route);
     });
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:nu_bank_clone/app/modules/home/view/home_view.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/entities/login.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/interfaces/i_user_services.dart';
@@ -63,6 +63,6 @@ class LoginUseCase implements ILoginUseCase {
   @override
   void logout() {
     _userStore.removeUser();
-    Get.toNamed(LoginView.route);
+    Modular.to.navigate(LoginView.route);
   }
 }

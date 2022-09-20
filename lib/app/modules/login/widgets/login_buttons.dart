@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nu_bank_clone/core/services/bottom_sheet.dart';
 import 'package:nu_bank_clone/core/widgets/safe_button/safe_button.dart';
 import 'package:nu_bank_clone/themes/text_style/app_text_style.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginButtons extends StatelessWidget {
   final Size size;
@@ -21,7 +22,7 @@ class LoginButtons extends StatelessWidget {
           onTap: () => BottomSheetServices.createUser(context),
           width: size.width * 0.9,
           child: Text(
-            'Começar',
+            AppLocalizations.of(context)!.createAccount,
             style: AppTextStyle.button,
           ),
         ),
@@ -30,7 +31,7 @@ class LoginButtons extends StatelessWidget {
           onTap: () => BottomSheetServices.login(context),
           width: size.width * 0.9,
           child: Text(
-            'Entrar com sua conta',
+            AppLocalizations.of(context)!.enterAccount,
             style: AppTextStyle.textButton,
           ),
         ),

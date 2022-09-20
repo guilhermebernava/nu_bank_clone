@@ -1,0 +1,35 @@
+{
+    "language": "Português",
+    "@language": {
+        "description": "A lingua selecionada"
+    },
+    "menuTitle": "Um mundo financeiro sem complexidades",
+    "@menuTitle": {
+        "description": "titulo do menu"
+    },
+    "createAccount": "Começar",
+    "@createAccount": {
+        "description": "Botão para criar conta"
+    },
+    "enterAccount": "Entrar com sua conta",
+    "@enterAccount": {
+        "description": "Botão para entrar com sua conta"
+    },
+    "loginTitle": "Bom te ver novamente! Digite seu CPF para acessar o aplicativo",
+    "@loginTitle": {
+        "description": "Titulo do login"
+    },
+    "loginSubtitle": "É novo por aqui? Pedir conta e cartão",
+    "@loginSubtitle": {
+        "description": "subtitlo do login"
+    },
+    "loginSecondTitle": "Coloque sua senha, ou clique em Esqueceu sua senha ?",
+    "@loginSecondTitle":{
+        "description": "Titulo da segunda tela de login"
+    },
+    "forgotPassword": "Esqueceu sua senha ?",
+    "@forgotPassword":{
+        "description": "Esqueceu a sua senha"
+    }
+
+}

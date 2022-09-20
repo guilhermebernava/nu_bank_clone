@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/interfaces/i_login_use_case.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/use_cases/login_use_case.dart';
 import 'package:nu_bank_clone/core/input_formatters/api_cpf_input_fromatter.dart';
@@ -12,6 +12,7 @@ import 'package:nu_bank_clone/core/widgets/core_input/core_input.dart';
 import 'package:nu_bank_clone/core/widgets/core_text_button.dart';
 import 'package:nu_bank_clone/core/widgets/login_button.dart/login_button.dart';
 import 'package:nu_bank_clone/themes/text_style/app_text_style.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginBottomSheet extends StatelessWidget {
   const LoginBottomSheet({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class LoginBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final ILoginUseCase loginUseCase = Get.find<LoginUseCase>();
+    final ILoginUseCase loginUseCase = Modular.get<LoginUseCase>();
 
     return BodyBottomSheet(
       size: size,
@@ -35,7 +36,7 @@ class LoginBottomSheet extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Bom te ver novamente! Digite seu CPF para acessar o aplicativo',
+                  AppLocalizations.of(context)!.loginTitle,
                   style: AppTextStyle.titleLogin,
                 ),
                 const SizedBox(
@@ -56,7 +57,7 @@ class LoginBottomSheet extends StatelessWidget {
                     Navigator.pop(context);
                     BottomSheetServices.createUser(context);
                   },
-                  text: 'É novo por aqui? Pedir conta e cartão',
+                  text: AppLocalizations.of(context)!.loginSubtitle,
                 ),
                 SizedBox(height: size.height * 0.15),
                 LoginButton(

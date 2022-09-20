@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/interfaces/i_login_use_case.dart';
 import 'package:nu_bank_clone/app/modules/login/domain/use_cases/login_use_case.dart';
 import 'package:nu_bank_clone/core/animations/shake_widget.dart';
@@ -10,6 +10,7 @@ import 'package:nu_bank_clone/core/widgets/core_input/core_input.dart';
 import 'package:nu_bank_clone/core/widgets/core_text_button.dart';
 import 'package:nu_bank_clone/core/widgets/login_button.dart/login_button.dart';
 import 'package:nu_bank_clone/themes/text_style/app_text_style.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginSecondBottomSheet extends StatefulWidget {
   const LoginSecondBottomSheet({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _LoginSecondBottomSheetState extends State<LoginSecondBottomSheet> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final ILoginUseCase loginUseCase = Get.find<LoginUseCase>();
+    final ILoginUseCase loginUseCase = Modular.get<LoginUseCase>();
     final shakeKey = GlobalKey<ShakeWidgetState>();
 
     return Wrap(
@@ -51,7 +52,7 @@ class _LoginSecondBottomSheetState extends State<LoginSecondBottomSheet> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Coloque sua senha, \nou clique em \n"Esqueceu sua senha ?"',
+                        AppLocalizations.of(context)!.loginSecondTitle,
                         style: AppTextStyle.titleLogin,
                       ),
                       const SizedBox(
@@ -70,7 +71,7 @@ class _LoginSecondBottomSheetState extends State<LoginSecondBottomSheet> {
                         onTap: () {
                           Navigator.pushNamed(context, '/teste');
                         },
-                        text: 'Esqueceu sua senha ?',
+                        text: AppLocalizations.of(context)!.forgotPassword,
                       ),
                       LoginButton(
                         callback: () async {
